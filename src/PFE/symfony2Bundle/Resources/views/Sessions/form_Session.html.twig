@@ -1,0 +1,44 @@
+{%extends 'applicationBundle::starter.html.twig'%}
+{%block stylesheets%}
+{%endblock%}
+{%block body%}
+{%block content%}
+<div class="row">
+    <div class="box col-md-12">
+        <div class="box-inner">
+            <div class="box-header well" data-original-title="">
+                <h2><i class="glyphicon glyphicon-star-empty"></i>Registration</h2>
+            </div>
+				<div class="box-content">
+                
+<form action="" method="post" {{ form_enctype(form) }} class="register">
+<div class="error">
+	{{ form_errors(form) }}
+</div>
+		<p >{{ form_label(form.dateDebutSession) }}
+                    {{ form_errors(form.dateDebutSession) }}
+			{{ form_widget(form.dateDebutSession) }}
+		</p>
+	
+		<p>{{ form_label(form.dateFinSession) }}
+			{{ form_errors(form.dateFinSession) }}
+			{{ form_widget(form.dateFinSession) }}
+		</p>
+	
+		
+                    <p>{{ form_label(form.user) }}
+			{{ form_errors(form.user) }}
+			{{ form_widget(form.user) }}
+		<p>
+	
+<input type="submit" value="Added" class="button"/>
+
+        </form>
+                     
+</div><!--/fluid-row-->
+   
+                                </div>
+        </div>
+</div>
+{%endblock%}
+{%endblock%}

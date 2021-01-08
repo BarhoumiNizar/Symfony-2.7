@@ -1,0 +1,47 @@
+
+{%extends 'applicationBundle::starter.html.twig'%}
+{%block body%}
+{%block content%}
+  <div class="box box-info">
+            
+            <div class="box-footer clearfix">
+              
+ 
+             
+              
+            
+             
+          
+<form action="" method="post" {{ form_enctype(form) }} class="register">
+<div class="error">
+	{{ form_errors(form) }}
+</div><h4>Création d'un nouvel capteur</h4>
+            <fieldset class="row2">
+               
+                <p>
+                        {{ form_label(form.nomCapteur) }}
+			{{ form_errors(form.nomCapteur) }}
+			{{ form_widget(form.nomCapteur) }}
+                </p>
+		
+		
+		
+                    <p>{{ form_label(form.idVille) }}
+			{{ form_errors(form.idVille) }}
+			{{ form_widget(form.idVille) }}
+		</p>
+
+
+                <input type="submit" value="Ajouter >>" class="button"/>
+</fieldset>
+        </form>
+                     
+</div><!--/fluid-row-->
+   
+                                </div>
+        </div>
+</div>
+        </div>
+</div>         
+{%endblock%}
+{%endblock%}

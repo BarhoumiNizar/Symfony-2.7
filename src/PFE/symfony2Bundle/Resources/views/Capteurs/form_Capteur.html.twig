@@ -1,0 +1,103 @@
+{%extends 'applicationBundle::starter.html.twig'%}
+
+{%block body%}
+{%block content%}
+  <div class="box box-info">
+            
+            <div class="box-footer clearfix">
+              
+ 
+             
+              
+            
+             
+          
+<form action="" method="post" {{ form_enctype(form) }} class="register">
+<div class="error">
+	{{ form_errors(form) }}
+</div><h4>Création d'un nouvel capteur</h4>
+            <fieldset class="row2">
+               
+                <p>
+                        {{ form_label(form.nomCapteur) }}
+			{{ form_errors(form.nomCapteur) }}
+			{{ form_widget(form.nomCapteur) }}
+                </p>
+		
+		
+		<p>{{ form_label(form.processCapteur) }}
+			{{ form_errors(form.processCapteur) }}
+			{{ form_widget(form.processCapteur) }}
+		</p>
+	 <p>{{ form_label(form.precisionCapteur) }}
+			{{ form_errors(form.precisionCapteur) }}
+			{{ form_widget(form.precisionCapteur) }} 
+		</p>
+		<p>{{ form_label(form.poidsCapteur) }}
+			{{ form_errors(form.poidsCapteur) }}
+			{{ form_widget(form.poidsCapteur) }}
+		</p>
+	
+		<p>{{ form_label(form.capaciteCapteur) }}
+			{{ form_errors(form.capaciteCapteur) }}
+			{{ form_widget(form.capaciteCapteur) }}
+		</p>
+                <p>{{ form_label(form.dtePremUtilisation) }}
+			{{ form_errors(form.dtePremUtilisation) }}
+			{{ form_widget(form.dtePremUtilisation) }}
+		</p>
+
+		<p>{{ form_label(form.dateFabrication) }}
+			{{ form_errors(form.dateFabrication) }}
+			{{ form_widget(form.dateFabrication) }}
+		</p>
+		<p>{{ form_label(form.dateExpiration) }}
+			{{ form_errors(form.dateExpiration) }}
+			{{ form_widget(form.dateExpiration) }}
+		</p>
+                 
+                </fieldset>
+            <fieldset class="row3">
+               
+		
+
+		
+                <p>{{ form_label(form.modeleCapteur) }}
+			{{ form_errors(form.modeleCapteur) }}
+			{{ form_widget(form.modeleCapteur) }}
+		</p>
+                      <p>{{ form_label(form.typecapteur) }}
+			{{ form_errors(form.typecapteur) }}
+			{{ form_widget(form.typecapteur) }}
+                      </p>
+                      <p>{{ form_label(form.systemeCapteur) }}
+			{{ form_errors(form.systemeCapteur) }}
+			{{ form_widget(form.systemeCapteur) }}
+		</p>
+                      <p>{{ form_label(form.idOrigine) }}
+			{{ form_errors(form.idOrigine) }}
+			{{ form_widget(form.idOrigine) }}
+		        </p>
+<p>{{ form_label(form.etat) }}
+			{{ form_errors(form.etat) }}
+			{{ form_widget(form.etat) }}
+		</p>
+                    <p>{{ form_label(form.descriptionCapteur) }}
+			{{ form_errors(form.descriptionCapteur) }}
+			{{ form_widget(form.descriptionCapteur) }}
+		</p>
+ 
+
+                <input type="submit" value="Ajouter >>" class="button"/>
+</fieldset>
+        </form>
+                     
+</div><!--/fluid-row-->
+   
+                                </div>
+        </div>
+</div>
+        </div>
+</div>         
+{%endblock%}
+{%endblock%}

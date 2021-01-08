@@ -1,0 +1,38 @@
+{# empty Twig template #}
+{%extends 'applicationBundle::starter.html.twig'%}
+{%block body%}
+{%block content%}
+
+<form action="" method="post" {{ form_enctype(form) }} class="register">
+<div class="error">
+	{{ form_errors(form) }}
+</div>
+            <fieldset class="row2">
+                <legend>
+                </legend>
+                <p>
+                        {{ form_label(form.nomOrigine) }}
+			{{ form_errors(form.nomOrigine) }}
+			{{ form_widget(form.nomOrigine) }}
+                </p>
+		<p>{{ form_label(form.localisationOrigine) }}
+			{{ form_errors(form.localisationOrigine) }}
+			{{ form_widget(form.localisationOrigine) }}
+		</p>
+		
+
+
+
+
+ <input type="submit" value="Added" class="button"/>
+</fieldset>
+        </form>
+                     
+</div><!--/fluid-row-->
+   
+                                </div>
+        </div>
+</div>
+                 
+{%endblock%}
+{%endblock%}

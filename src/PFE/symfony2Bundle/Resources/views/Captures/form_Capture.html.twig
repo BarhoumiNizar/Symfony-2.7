@@ -1,0 +1,78 @@
+{%extends 'applicationBundle::starter.html.twig'%}
+{%block body%}
+{%block content%}
+<div class="box box-info">
+            <div class="box-header">
+              
+
+                <h3 class="box-title">nouvelle capture</h3>
+            
+             
+            </div>
+            
+            <div class="box-footer clearfix">
+                <div class="box-footer clearfix">
+        
+                
+<form action="" method="post" {{ form_enctype(form) }} class="register">
+<div class="error">
+	{{ form_errors(form) }}
+</div> <fieldset class="row2">
+                     <p>{{ form_label(form.capteur) }}
+			{{ form_errors(form.capteur) }}
+			{{ form_widget(form.capteur) }}
+		     </p>
+		<p>{{ form_label(form.dateCapture) }}
+		
+			{{ form_errors(form.dateCapture) }}
+			{{ form_widget(form.dateCapture) }}
+		</p>
+	
+		<p>{{ form_label(form.localisationCapture) }}
+		
+			{{ form_errors(form.localisationCapture) }}
+			{{ form_widget(form.localisationCapture) }}
+		</p>
+	
+	
+		<p>{{ form_label(form.nomMesure) }}
+		
+			{{ form_errors(form.nomMesure) }}
+			{{ form_widget(form.nomMesure) }}
+		</p>
+	
+		<p>{{ form_label(form.valeurMesure) }}
+			{{ form_errors(form.valeurMesure) }}
+			{{ form_widget(form.valeurMesure) }}
+                </p>
+		<p>{{ form_label(form.Mesure) }}
+			{{ form_errors(form.Mesure) }}
+			{{ form_widget(form.Mesure) }}
+		</p>
+	 <p>{{ form_label(form.Ville) }}
+			{{ form_errors(form.Ville) }}
+			{{ form_widget(form.Ville) }}
+		</p>
+        <p>{{ form_label(form.zoom) }}
+		
+			{{ form_errors(form.zoom) }}
+			{{ form_widget(form.zoom) }}
+		</p>
+		
+	
+</fieldset>
+    <fieldset class="row3">
+     
+              
+        </fieldset>
+      <input type="submit" value="Added" class="button"/>
+        </form>
+                     
+</div><!--/fluid-row-->
+   
+                                </div>
+        </div>
+</div>
+      
+{%endblock%}
+{%endblock%}

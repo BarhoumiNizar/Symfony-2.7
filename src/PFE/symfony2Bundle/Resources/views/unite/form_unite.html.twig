@@ -1,0 +1,72 @@
+
+{%extends 'applicationBundle::starter.html.twig'%}
+{%block body%}
+{%block content%}
+ <div class="box box-info">
+            
+            <div class="box-footer clearfix">
+<form action="" method="post" {{ form_enctype(form) }} class="register">
+<div class="error">
+	{{ form_errors(form) }}
+</div><h4>gérer les unités de mesure
+</h4>
+           
+                    
+                <td><tr>{{ form_label(form.nomUniteMesure) }}
+		
+			{{ form_errors(form.nomUniteMesure) }}
+			{{ form_widget(form.nomUniteMesure) }}
+               </tr>
+	
+            <tr>{{ form_label(form.normeUniteMesure) }}
+		
+			{{ form_errors(form.normeUniteMesure) }}
+			{{ form_widget(form.normeUniteMesure) }}
+           </tr>
+            <tr>{{ form_label(form.description) }}
+		
+			{{ form_errors(form.description) }}
+			{{ form_widget(form.description) }}
+           </tr>
+	
+		
+            <tr><input type="submit" value="Added" class="button"/></tr>
+            </td>
+        </form>
+</fieldset>
+     <fieldset class="row3">
+    <table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+ <thead>
+<tr>    <th scope="col" class="rounded">id</th>
+	<th scope="col" class="rounded">unité</th>
+	<th scope="col" class="rounded">norme</th>
+        
+        <th scope="col" class="rounded">description</th>
+	
+        {% if app.session.get('utilisat').fonction=='admin'%}<th scope="col" class="rounded">supprimer</th>
+ {%endif%}
+</tr>
+</thead>
+    <tbody>               
+{%for line in res%}
+<tr>    <td>{{line.id}}</td>
+	<td>{{line.nomUniteMesure}}</td>
+	<td>{{line.normeUniteMesure}}</td>
+        
+        <td >{{line.description}}</td>
+        
+	{% if app.session.get('utilisat').fonction=='admin'%}<td><a href="{{path('delete_typeCapteur',{'id':line.id})}}" onclick="if(!confirm('voulez-vous supprimer ce type de capteur')) return false" class="ask"><img src="{{asset('bundles/application/images/del.png')}}" alt="" title="" border="0" /></a></td>{%endif%}
+</tr>
+</tr>
+{%endfor%}
+</tbody>
+</table>
+    </fieldset>
+</div><!--/fluid-row-->
+   
+                                </div>
+        </div>
+</div>
+      
+{%endblock%}
+{%endblock%}

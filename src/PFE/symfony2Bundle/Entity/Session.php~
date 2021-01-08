@@ -1,0 +1,137 @@
+<?php
+
+namespace PFE\symfony2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Session
+ *
+ * @ORM\Table()
+ * @ORM\Entity
+ */
+class Session
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var \Date
+     *
+     * @ORM\Column(name="dateDebutSession", type="date")
+     */
+    private $dateDebutSession;
+
+    /**
+     * @var \Date
+     *
+     * @ORM\Column(name="dateFinSession", type="date")
+     */
+    private $dateFinSession;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user", type="string", length=255)
+     */
+    private $user;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descriptioSession", type="string", length=255)
+     */
+    private $descriptioSession;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set dateDebutSession
+     *
+     * @param \Date $dateDebutSession
+     *
+     * @return Session
+     */
+    public function setDateDebutSession($dateDebutSession)
+    {
+        $this->dateDebutSession = $dateDebutSession;
+
+        return $this;
+    }
+
+    /**
+     * Get dateDebutSession
+     *
+     * @return \Date
+     */
+    public function getDateDebutSession()
+    {
+        return $this->dateDebutSession;
+    }
+
+    /**
+     * Set dateFinSession
+     *
+     * @param \Date $dateFinSession
++
+     *      *
+     * @return Session
+     */
+    public function setDateFinSession($dateFinSession)
+    {
+        $this->dateFinSession = $dateFinSession;
+
+        return $this;
+    }
+
+    /**
+     * Get dateFinSession
+     *
+     * @return \Date
+     */
+    public function getDateFinSession()
+    {
+        return $this->dateFinSession;
+    }
+
+    /**
+     * Set descriptioSession
+     *
+     * @param string $descriptioSession
+     *
+     * @return Session
+     */
+    public function setDescriptioSession($descriptioSession)
+    {
+        $this->descriptioSession = $descriptioSession;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptioSession
+     *
+     * @return string
+     */
+    public function getDescriptioSession()
+    {
+        return $this->descriptioSession;
+    }
+
+    
+}

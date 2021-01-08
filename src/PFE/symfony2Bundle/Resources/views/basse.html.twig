@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Google Map</h1>
+
+<div id="map" style="width:700px;height:700px;"></div>
+
+<script>
+function myMap() {
+   var mapCanvas = document.getElementById("map");
+  var myCenter=new google.maps.LatLng(33.886917,9.537499);
+  var mapOptions = {center: myCenter, zoom: 6.5};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  google.maps.event.addListener(map, 'click', function(event) {
+    placeMarker(map, event.latLng);
+  });
+}
+
+function placeMarker(map, location) {
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+  var infowindow = new google.maps.InfoWindow({
+    content: 'Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng()
+  });
+  infowindow.open(map,marker);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5Ahp9nHod12mn5ZHY6NG_xtEy2ay3hN8&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5Ahp9nHod12mn5ZHY6NG_xtEy2ay3hN8&callback=myMap"></script>
+{%block content%}
+{%endblock%}
+</body>
+
+</html>

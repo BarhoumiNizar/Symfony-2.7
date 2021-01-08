@@ -1,0 +1,104 @@
+{%extends 'applicationBundle::starter.html.twig'%}
+{%block body%}
+{%block content%}
+ <div class="box box-info">
+            
+            <div class="box-footer clearfix">
+               
+                
+                 
+<form  method="post" enctype="multipart/form-data" class="register">
+<div class="error">
+	{{ form_errors(form) }}
+</div>
+    <h4>Création d'un nouvel utilisateur</h4>
+            <fieldset class="row2">
+               
+                
+				
+				<p>
+		{{form_label(form.nomUtilisateur)}}
+		{{ form_errors(form.nomUtilisateur)}}
+		{{form_widget(form.nomUtilisateur)}}
+				</p>
+				<p>
+		{{form_label(form.prenomUtilisateur)}}
+		{{ form_errors(form.prenomUtilisateur)}}
+		{{form_widget(form.prenomUtilisateur)}}
+				</p>
+				<p>
+		{{form_label(form.cinUtilisateur)}}
+		{{ form_errors(form.cinUtilisateur)}}
+		{{form_widget(form.cinUtilisateur)}}
+			</p>
+			<p>
+		{{form_label(form.dteNaissanceUtilisateur)}}
+		{{ form_errors(form.dteNaissanceUtilisateur)}}
+		{{form_widget(form.dteNaissanceUtilisateur)}}
+               
+			</p>
+                        <p>
+		{{form_label(form.telUtilisateur)}}
+		{{ form_errors(form.telUtilisateur)}}
+		{{form_widget(form.telUtilisateur)}}
+				</p>
+				<p>
+		{{form_label(form.adressUtilisateur)}}
+		{{ form_errors(form.adressUtilisateur)}}
+		{{form_widget(form.adressUtilisateur)}}
+				</p>
+				<p>
+		{{form_label(form.dateAjoutUtilisateur)}}
+		{{ form_errors(form.dateAjoutUtilisateur)}}
+		{{form_widget(form.dateAjoutUtilisateur)}}
+				</p>
+			 </fieldset>
+            <fieldset class="row3">
+                
+                <p>
+		{{form_label(form.fonction)}}
+		{{ form_errors(form.fonction)}}
+		{{form_widget(form.fonction)}}
+				</p>
+				<p>
+		{{form_label(form.login)}}
+		{{ form_errors(form.login)}}
+		{{form_widget(form.login)}}
+                                </p>
+                                <p>
+		{{form_label(form.motpasse)}}
+		{{ form_errors(form.motpasse)}}
+		{{form_widget(form.motpasse)}}
+				</p>
+                               <p>
+		
+				
+                {{form_label(form.photo)}}
+		{{ form_errors(form.photo)}}
+		{{form_widget(form.photo)}}
+    
+                           </p>
+                                
+                                <div class="infobox">
+                                    <h5>Information utile</h5>
+                                    <p>Veuillez remplir entièrement le formulaire suivant et cliquer ensuite sur le bouton « Ajouter » pour valider l'ajout d'un nouvel utilisteur</p> 
+                                    
+                                </div>
+                                <input type="submit" value="Ajouter" class="button"/>
+                
+</fieldset>
+        </form>
+                     
+</div><!--/fluid-row-->
+   
+                                </div>
+        </div>
+</div>
+  </div>
+  </div>
+
+{%endblock%}
+{%endblock%}
+
+
+

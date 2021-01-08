@@ -1,0 +1,157 @@
+<?php
+
+namespace PFE\symfony2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * typeCapteur
+ *
+ * @ORM\Table()
+ * @ORM\Entity
+ */
+class typeCapteur
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomTypeCapteur", type="string", length=50)
+     */
+    
+    private $nomTypeCapteur;
+    
+
+    
+     /**
+   * @ORM\ManyToOne(targetEntity="PFE\symfony2Bundle\Entity\grandeurMesure")
+   * @ORM\JoinColumn(nullable=false)
+   */
+  protected $unite;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descriptionTypeCapteur", type="string", length=255)
+     */
+    private $descriptionTypeCapteur;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="photo", type="string", length=255)
+     */
+    private $image;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nomTypeCapteur
+     *
+     * @param string $nomTypeCapteur
+     *
+     * @return typeCapteur
+     */
+    public function setNomTypeCapteur($nomTypeCapteur)
+    {
+        $this->nomTypeCapteur = $nomTypeCapteur;
+
+        return $this;
+    }
+
+    /**
+     * Get nomTypeCapteur
+     *
+     * @return string
+     */
+    public function getNomTypeCapteur()
+    {
+        return $this->nomTypeCapteur;
+    }
+
+   
+
+    /**
+     * Set descriptionTypeCapteur
+     *
+     * @param string $descriptionTypeCapteur
+     *
+     * @return typeCapteur
+     */
+    public function setDescriptionTypeCapteur($descriptionTypeCapteur)
+    {
+        $this->descriptionTypeCapteur = $descriptionTypeCapteur;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptionTypeCapteur
+     *
+     * @return string
+     */
+    public function getDescriptionTypeCapteur()
+    {
+        return $this->descriptionTypeCapteur;
+    }
+    public function getName()
+    {
+       return $this->getNomTypeCapteur();
+
+    }
+    
+     public function getUploadDir()
+   {
+       return __DIR__.'/../../../../web/bundles/application/upload';
+      
+   }
+   public function Upload()
+   {
+       $this->image->move($this->getUploadDir(),$this->image->getClientOriginalName());
+       $this->image=$this->image->getClientOriginalName();
+   }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return typeCapteur
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    
+
+    
+}

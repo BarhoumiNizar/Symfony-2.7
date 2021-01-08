@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.block_contact p label {
+    display: inline-block;
+    width: 100px;
+    margin-right: 20px;
+    vertical-align: top;
+    text-align: right;
+}
+.block_contact p input,  textarea {
+    /*déjà en inline-block*/
+    width: 50px;
+    padding: 4px;
+    vertical-align: top;
+}

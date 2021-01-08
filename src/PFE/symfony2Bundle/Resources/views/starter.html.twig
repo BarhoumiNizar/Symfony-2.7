@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link href="{{asset('bundles/application/css/charisma-app.css')}}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{asset('bundles/application/css/default.css')}}"/>
+        <link rel="stylesheet" type="text/css" href="{{asset('bundles/application/css/style_1.css')}}" />
+        <link rel="stylesheet" href="{{asset('bundles/application/bootstrap/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('bundles/application/dist/css/material-datetime-picker.css')}}">
+
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="{{asset('bundles/application/dist/css/AdminLTE.min.css')}}">
+
+        <link rel="stylesheet" href="{{asset('bundles/application/dist/css/skins/skin-blue.min.css')}}">
+
+
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+
+        <link rel="stylesheet" href="{{asset('bundles/application//dist/material-datetime-picker.css')}}">
+
+        <style>
+            content {
+                background-color: red;
+            }
+            body {
+
+                font-family: 'Arial', sans-serif;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .c-btn {
+                font-size: 14px;
+                text-transform: capitalize;
+                font-weight: 600;
+                display: inline-block;
+                line-height: 36px;
+                cursor: pointer;
+                text-align: center;
+                text-transform: uppercase;
+                min-width: 0px;
+                height: 0px;
+                margin: 1px 8px;
+                padding: 0 8px;
+                text-align: center;
+                letter-spacing: .5px;
+                border-radius: 2px;
+                background:#3c8dbc;
+                color: #393939;
+                transition: background 200ms ease-in-out;
+            }
+
+            .c-btn--flat {
+                background: transparent;
+                margin: 10px 8px;
+                min-width: 52px;
+            }
+
+            .c-btn:hover {
+                background: rgba(153, 153, 153, 0.2);
+                color: #393939;
+            }
+
+            .c-btn:active {
+                box-shadow: 0 9.6087px 10.78261px 0 rgba(0, 0, 0, 0.17217), 0 13.56522px 30.3913px 0 rgba(0, 0, 0, 0.15043);
+            }
+
+            .c-btn--flat, .c-btn--flat:hover, .c-btn--flat:active {
+                box-shadow: none;
+            }
+
+        </style>
+    </head>
+    <body class="hold-transition skin-blue sidebar-mini">
+        <div class="wrapper">
+
+            <!-- Main Header -->
+            <header class="main-header">
+
+                <!-- Logo -->
+                <a href="index2.html" class="logo">
+                    <!-- mini logo for sidebar mini 50x50 pixels -->
+                    <span class="logo-mini"><img src="{{asset('bundles/application/images/yelp.png')}}"  /></span>
+                    <!-- logo for regular state and mobile devices -->
+                    <span class="logo-lg"><img src="{{asset('bundles/application/images/yelp.png')}}" alt="" title="" border="0" /><b>Smart</b><b>Charisma</b></span>
+                </a>
+
+                <!-- Header Navbar -->
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <!-- Navbar Right Menu -->
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                            <!-- Messages: style can be found in dropdown.less-->
+                            <li class="dropdown messages-menu">
+                                <!-- Menu toggle button -->
+
+
+                                <!-- /.messages-menu -->
+
+                                <!-- Notifications Menu -->
+
+                                <!-- Tasks Menu -->
+
+
+                                <!-- User Account Menu --> <li class="dropdown user user-menu"><a href="{{path('Deconnexion')}}" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span class="hidden-xs">Deconnexion</span></a></li>
+                            <li class="dropdown user user-menu">
+                                <!-- Menu Toggle Button -->
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <!-- The user image in the navbar-->
+                                    <img src="{{asset('bundles/application/upload/'~app.session.get('utilisat').photo)}}" width="50" height="50" class="user-image" alt="User Image">
+                                    <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                    <b> Welcome</b>
+                                    <span class="hidden-xs">{{app.session.get('utilisat').fonction}}&nbsp;&nbsp;{{app.session.get('utilisat').nomUtilisateur}}</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- The user image in the menu -->
+                                    <li class="user-header">
+                                        <img src="{{asset('bundles/application/upload/'~app.session.get('utilisat').photo)}}" width="50" height="50" class="img-circle" alt="User Image">
+
+                                        <p>welcome admin<b>
+                        {{app.session.get('utilisat').nomUtilisateur}}</b>
+                                            <small>Member since Nov. 2012</small>
+                                        </p>
+                                    </li>
+                                    <!-- Menu Body -->
+                                    <li class="user-body">
+                                        <div class="row">
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Followers</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Sales</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Friends</a>
+                                            </div>
+                                        </div>
+                                        <!-- /.row -->
+                                    </li>
+                                    <!-- Menu Footer-->
+                                    <li class="user-footer">
+                                        <div class="pull-left">
+                                            <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                        </div>
+                                        <div class="pull-right">
+                                            <a href="{{path('Deconnexion')}}" class="btn btn-default btn-flat">Deconnexion</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Control Sidebar Toggle Button -->
+                            <li class="dropdown user user-menu">
+                                <a class="c-btn c-datepicker-btn"><img src="{{asset('bundles/application/images/calen.png')}}" alt="" title="" border="0" />
+
+                                </a>
+
+
+
+                                <script src="http://www.unpkg.com/babel-polyfill@6.2.0/dist/polyfill.js"></script>
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.standalone.js"></script>
+                                <script src="{{asset('bundles/application/dist/js/material-datetime-picker.js')}}" charset="utf-8"></script>
+
+                                <script>
+
+                                    var picker = new MaterialDatetimePicker({})
+                                            .on('submit', function(d) {
+                                                output.innerText = d;
+                                            });
+
+                                    var el = document.querySelector('.c-datepicker-btn');
+                                    el.addEventListener('click', function() {
+                                        picker.open();
+                                    }, false);
+
+                                </script>
+                                <!-- The user image in the navbar-->
+
+                                <ul class="dropdown-menu">
+                                    <!-- The user image in the menu -->
+                                    <pre id="output"></pre>
+
+
+
+                                </ul>
+                            </li>
+                            </lu>
+                    </div>
+                </nav>
+            </header>
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar">
+
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+
+                    <!-- Sidebar user panel (optional) -->
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="{{asset('bundles/application/upload/'~app.session.get('utilisat').photo)}}" class="img-circle" alt="User Image">
+                        </div>
+                        <div class="pull-left info">
+                            <p>{{app.session.get('utilisat').nomUtilisateur}}</p>
+                            <!-- Status -->
+                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        </div>
+                    </div>
+
+                    <!-- search form (Optional) -->
+                    <form action="{{path('recherche_User')}}" method="post" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search..."name="motcle">
+                            <span class="input-group-btn">
+                                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- /.search form -->
+
+                    <!-- Sidebar Menu -->
+                    <ul class="sidebar-menu">
+                        <li class="header">HEADER</li>
+                        <!-- Optionally, you can add icons to the links -->
+        {% if app.session.get('utilisat').fonction=='admin'%}<li class="active"><a href="{{path('application_form_Affich_user')}}"> <i class="fa fa-link"></i> <span>Gestion des utilisateurs</span></a></li>{%endif%}
+{% if app.session.get('utilisat').fonction=='user'%}<li><a href="{{path('application_form_Affich_Capteur')}}"><i class="fa fa-link"></i> <span>Lister les capteurs</span></a></li>{%endif%}
+                       {% if app.session.get('utilisat').fonction=='admin'%} <li><a href="{{path('application_form_Affich_Capteur')}}"><i class="fa fa-link"></i> <span>Gestion des capteurs</span></a></li>{%endif%}
+                        {% if app.session.get('utilisat').fonction=='admin'%}<li class="active"><a href="{{path('application_form_Affich_typeCapteur')}}"><i class="fa fa-link"></i>  <span>Gestion de types des capteurs</span></a></li>{%endif%}
+        {% if app.session.get('utilisat').fonction=='admin'%} <li class="active"><a href="{{path('unité_mesure')}}"><i class="fa fa-link"></i>  <span>Gestion des unités de mesures</span></a></li>{%endif%}
+       {% if app.session.get('utilisat').fonction=='admin'%} <li><a href="{{path('application_form_Affich_Session')}}"> <i class="fa fa-link"></i> <span>Gestion des sessions</span></a></li>{%endif%}
+{% if app.session.get('utilisat').fonction=='user'%}<li class="active"><a href="{{path('ajout_ville')}}"> <i class="fa fa-link"></i> <span>Localiser les capteurs</span></a></li>{%endif%}
+                        <li class="treeview">
+                            <a href="#"><i class="fa fa-link"></i> <span>Gestion des Paramètres </span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="{{path('Ajout_Paramcap')}}">Fixer les paramètres standard</a></li>
+                                <li><a href="{{path('Ajout_Param')}}">Fixer les paramètres des capteurs</a></li>
+                            </ul>
+                        </li>
+        {% if app.session.get('utilisat').fonction=='user'%}<li class="active"><a href="{{path('application_form_Ajout_Capture')}}"> <i class="fa fa-link"></i> <span>Génerer une nouvelle capture</span></a></li>{%endif%}
+        {% if app.session.get('utilisat').fonction=='user'%} <li><a href="{{path('chart')}}"> <i class="fa fa-link"></i> <span>Statistique</span></a></li>{%endif%}
+
+
+                    </ul>
+                    <!-- /.sidebar-menu -->
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper" >
+                <!-- Content Header (Page header) -->
+                <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        </lu>
+                </div><!--/#content.col-md-0-->
+
+          {%block content%}
+              {%endblock%}
+            </div><!--/fluid-row-->
+        </div>
+
+
+
+
+
+        <!-- /.content-wrapper -->
+
+        <!-- Main Footer -->
+
+        <!-- ./wrapper -->
+
+        <!-- REQUIRED JS SCRIPTS -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="{{asset('bundles/application/plugins/jQuery/jquery-2.2.3.min.js')}}"></script>
+        <!-- Bootstrap 3.3.6 -->
+        <script src="{{asset('bundles/application/bootstrap/js/bootstrap.min.js')}}"></script>
+        <!-- AdminLTE App -->
+        <script src="{{asset('bundles/application/dist/js/app.min.js')}}"></script>
+
+        <!-- Optionally, you can add Slimscroll and FastClick plugins.
+             Both of these plugins are recommended to enhance the
+             user experience. Slimscroll is required when using the
+             fixed layout. -->
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Resources/views/Users/affich_User.html.twig</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Controller/StatController.php</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/app/AppKernel.php</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Resources/views/Captures/affich_Capture.html.twig</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Resources/views/starter.html.twig</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/app/config/routing.yml</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Resources/views/Sessions/affich_Session.html.twig</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Entity/parametre.php</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Resources/config/routing.yml</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Resources/views/Stat/Stat.html.twig</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Resources/views/Users/form_User.html.twig</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Resources/views/Captures/form_Capture.html.twig</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Entity/Capture.php</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Controller/CapteursController.php</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/app/config/config.yml</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Form/SessionType.php</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Controller/UsersController.php</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Form/parametreType.php</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Controller/SessionsController.php</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Form/CaptureType.php</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Form/UtilisateurType.php</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Resources/views/Parametre/Ajout_paramcap.html.twig</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Resources/views/Capteurs/showCap.html.twig</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/composer.json</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Resources/views/basse.html.twig</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/app/config/parameters.yml</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Controller/ParametreController.php</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PiBundle/Controller/StatController.php</file>
+            <file>file:/C:/xampp/htdocs/PfeSamia/src/PFE/symfony2Bundle/Entity/SessionUser.php</file>
+        </group>
+    </open-files>
+</project-private>

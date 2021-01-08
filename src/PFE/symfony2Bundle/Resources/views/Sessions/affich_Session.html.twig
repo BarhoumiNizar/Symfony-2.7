@@ -1,0 +1,62 @@
+{%extends 'applicationBundle::starter.html.twig'%}
+{%block body%}
+{%block content%}
+       <div class="box box-info">
+            <div class="box-header">
+              
+
+              <h3 class="box-title">Sessions</h3>
+            
+             
+            </div>
+             <div class="pagination">
+        <span class="disabled"><< prev</span><span class="current">1</span><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>…<a href="">next >></a>
+    </div>
+           
+<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+ <thead>
+	<tr>
+		
+		<th scope="col" class="rounded">Date début</th>
+		<th scope="col" class="rounded">Date fin</th>
+		 <th scope="col" class="rounded">Utilisateur</th>
+                 <th scope="col" class="rounded">Description</th>
+                
+                <th scope="col" class="rounded">Supprimer</th>
+                
+                
+		
+	</tr>
+ </thead>
+ <tbody>                      
+{%for line in res%}
+<tr>
+	
+	<td>{{line.dateDebutSession}}</td>
+        <td>{% if line.dateFinSession== 0000-00-00 %}
+            -
+        {%else%} {{line.dateFinSession}} {%endif%}</td>
+	 <td>{{line.user}}</td>
+         <td>{% if line.dateFinSession== 0000-00-00%}
+             <img src="{{asset('bundles/application/images/online.png')}}" alt="" title="" border="0" />
+             {%else%}
+            <img src="{{asset('bundles/application/images/offline.png')}}" alt="" title="" border="0" />
+             {%endif%}
+         </td>
+         
+        
+	<td><a href="{{path('delete_Session',{'id':line.id})}}" onclick="if(!confirm('voulez-vous supprimer')) return false" class="ask"><img src="{{asset('bundles/application/images/trash.png')}}" alt="" title="" border="0" />supprimer</a></td>
+      
+        
+</tr>
+	
+   
+
+{%endfor%}
+
+</tbody>
+</table>
+        </div>
+         </div>
+{%endblock%}
+{%endblock%}

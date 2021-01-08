@@ -1,0 +1,93 @@
+{# empty Twig template #}
+{%extends 'applicationBundle::starter.html.twig'%}
+{%block body%}
+{%block content%}
+<div class="box box-info">
+            
+            <div class="box-footer clearfix">
+
+              
+<form action="" method="post" {{ form_enctype(form) }} class="register">
+<div class="error">
+	{{ form_errors(form) }}
+</div> 
+            <fieldset class="row2">
+                <h4 >Localiser les capteurs</h4>
+                 <p>
+                        {{ form_label(form.idCapteur) }}
+			{{ form_errors(form.idCapteur) }}
+			{{ form_widget(form.idCapteur) }}
+                </p>
+                <p>
+                        {{ form_label(form.nomVille) }}
+			{{ form_errors(form.nomVille) }}
+			{{ form_widget(form.nomVille) }}
+                </p>
+		
+		
+		<p>{{ form_label(form.localisationVille) }}
+			{{ form_errors(form.localisationVille) }}
+			{{ form_widget(form.localisationVille) }}
+		</p>
+	 <p>{{ form_label(form.mapVille) }}
+			{{ form_errors(form.mapVille) }}
+			{{ form_widget(form.mapVille) }} </p>
+         <p>
+                         <button type="button" class="pull-right btn btn-default" id="sendEmail"><a href="#">map
+                      <i class="fa fa-arrow-circle-right"></i></a></button>
+		</p>
+		<p>{{ form_label(form.description) }}
+			{{ form_errors(form.description) }}
+			{{ form_widget(form.description) }}
+		</p>
+                
+	<input type="submit" value="Added" class="button"/>
+</fieldset>
+		
+ <fieldset class="row3">
+     
+     
+     
+  
+
+<div id="map" style="width:400px;height:450px;"></div>
+
+<script>
+function myMap() {
+   var mapCanvas = document.getElementById("map");
+  var myCenter=new google.maps.LatLng(34.886917,10.537499);
+ 
+  var mapOptions = {center: myCenter, zoom: 7};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  google.maps.event.addListener(map, 'click', function(event) {
+    placeMarker(map, event.latLng);
+  
+  });
+}
+
+function placeMarker(map, location) {
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+  var infowindow = new google.maps.InfoWindow({
+    content: 'Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng()
+  });
+  infowindow.open(map,marker);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5Ahp9nHod12mn5ZHY6NG_xtEy2ay3hN8&callback=myMap"></script>
+
+ </fieldset>
+ 
+        </form>
+                     
+</div><!--/fluid-row-->
+   
+                                </div>
+        </div>
+</div>
+        </div>
+</div>         
+{%endblock%}
+{%endblock%}

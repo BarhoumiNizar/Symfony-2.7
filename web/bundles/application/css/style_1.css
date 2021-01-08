@@ -1,0 +1,175 @@
+
+a{
+color:#256c89;
+}
+
+
+h2{
+font-size:18px;
+color:#256c89;
+font-weight:normal;
+padding:0px 0 15px 0;
+margin:0px;
+clear:both;
+}
+h3{
+font-size:18px;
+color:#256c89;
+font-weight:normal;
+padding:0px 0 5px 20px;
+margin:0px;
+float:left;
+clear:both;
+}
+button
+{
+    background: rgba(221, 75, 57, 1)  repeat-x;
+    padding: 8px 10px 8px;
+    color: darksalmon;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    cursor: pointer;
+    float:left;
+    font-size:20px;
+   font-family:"mv boli";
+   color:black;
+    margin: 15px;
+   
+    margin-right:-500px
+}
+.main_content{
+margin:0 auto;
+width:900px;
+height:auto;
+padding:0px 0 50px 0;
+
+}
+.center_content{
+clear:both;
+}
+
+.left_content{
+width:195px;
+float:left;
+padding:30px 0 0 20px;
+}
+.right_content{
+width:600px;
+float:left;
+padding:5px 5px 5px 5px;
+}
+#rounded-corner
+{
+margin:55px;
+width:890px;
+text-align: right;
+border-collapse: collapse;
+}
+#rounded-corner thead th.rounded-company
+{
+
+font-size:20px;
+width:50px;
+background: #60c8f2 url('images/left.jpg') left top no-repeat;
+}
+#rounded-corner thead th.rounded-q4
+{
+background: #60c8f2 url('images/right.jpg') right top no-repeat;
+}
+#rounded-corner th
+{
+padding: 13px;
+font-weight: normal;
+font-size: 16px;
+color: white;
+background:  #357ca5;
+text-align: center;
+}
+#rounded-corner td
+{
+text-align: center;
+padding: 8px;
+background: #ecf8fd;
+border-top: 1px solid #fff;
+color: #669;
+}
+#rounded-corner tfoot td.rounded-foot-left
+{
+background: #ecf8fd url('images/botleft.jpg') left bottom no-repeat;
+}
+#rounded-corner tfoot td.rounded-foot-right
+{
+background: #ecf8fd url('images/botright.jpg') right bottom no-repeat;
+}
+#rounded-corner tbody tr:hover td
+{
+background: #d2e7f0;
+}
+
+
+
+
+a.bt_green{display:block; float:right; margin:10px 5px 10px 5px; line-height:31px; text-decoration:none; color:#FFFFFF; text-shadow:1px 1px #8fa42b;}
+a.bt_green strong{width:auto;height:31px; padding:0 10px 0 10px;display:block; float:left;background:url(images/bt_green_center.gif) repeat-x center;}
+a.bt_green span.bt_green_lft{width:10px;height:31px;display:block; float:left;background:url(images/bt_green_left.gif) no-repeat center right;}
+a.bt_green span.bt_green_r{width:10px;height:31px;display:block; float:left;background:url(images/bt_green_r.gif) no-repeat center right;}
+a:hover.bt_green{ text-decoration:underline;}
+
+a.bt_blue{display:block; float:right; margin:1px 1px 10px 5px; line-height:31px; text-decoration:none; color:#FFFFFF; text-shadow:1px 1px #3597bf;}
+a.bt_blue strong{width:auto;height:31px; padding:0 10px 0 10px;display:block; float:left;background:url(images/bt_blue_center.gif) repeat-x center;}
+a.bt_blue span.bt_blue_lft{width:10px;height:31px;display:block; float:left;background:url(images/bt_blue_left.gif) no-repeat center right;}
+a.bt_blue span.bt_blue_r{width:10px;height:31px;display:block; float:left;background:url(images/bt_blue_r.gif) no-repeat center right;}
+a:hover.bt_blue{ text-decoration:underline;}
+
+a.bt_red{display:block; float:right; margin:7px 500px 10px 3px; line-height:31px; text-decoration:none; color:#FFFFFF; text-shadow:1px 1px #c24739;}
+a.bt_red strong{width:auto;height:31px; padding:0 10px 0 10px;display:block; float:left;background:url(images/bt_red_center.gif) repeat-x center;}
+a.bt_red span.bt_red_lft{width:30px;height:31px;display:block; float:left;background:url(images/bt_red_left.gif) no-repeat center right;}
+a.bt_red span.bt_red_r{width:10px;height:31px;display:block; float:left;background:url(images/bt_red_r.gif) no-repeat center right;}
+a:hover.bt_red{ text-decoration:underline;}
+
+.sidebar_box{
+width:195px;
+padding:15px 0 5px 0;
+}
+
+div.pagination {
+width:1670px;
+clear:both;
+padding:10px 0 10px 0;
+margin:0px;
+text-align:center;
+float:left;
+clear:both;
+font-size:12px;
+}
+
+div.pagination a {
+padding: 2px 5px 2px 5px;
+margin-right: 2px;
+border: 1px solid #52bfea;
+text-decoration: none; 
+color: #52bfea;
+}
+div.pagination a:hover, div.pagination a:active {
+border:1px solid #52bfea;
+color: #fff;
+background-color: #52bfea;
+}
+div.pagination span.current {
+padding: 2px 5px 2px 5px;
+margin-right: 2px;
+border: 1px solid #52bfea;
+font-weight: bold;
+background-color: #52bfea;
+color: #FFF;
+}
+div.pagination span.disabled {
+padding: 2px 5px 2px 5px;
+margin-right: 2px;
+border: 1px solid #f3f3f3;
+color: #ccc;
+}

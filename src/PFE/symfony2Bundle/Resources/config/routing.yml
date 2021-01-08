@@ -1,0 +1,113 @@
+application_homepage:
+    path:     /hello
+    defaults: { _controller: applicationBundle:Default:index }
+
+application_usersauthentication:
+    path:     /user
+    defaults: { _controller: applicationBundle:Users:authentification }
+
+application_form_Ajout_user:
+    path:     /Ajout_user
+    defaults: { _controller: applicationBundle:Users:Ajout_User }
+application_form_Ajout_Capteur:
+    path:     /Ajout_Capteur
+    defaults: { _controller: applicationBundle:Capteurs:Ajout_Capteur }
+application_form_Ajout_typeCapteur:
+    path:     /Ajout_typeCapteur
+    defaults: { _controller: applicationBundle:typeCapteurs:Ajout_typeCapteur }
+application_form_Ajout_Session:
+    path:     /Ajout_Session
+    defaults: { _controller: applicationBundle:Sessions:Ajout_Session }
+application_form_Ajout_Capture:
+    path:     /Ajout_Capture
+    defaults: { _controller: applicationBundle:Captures:Ajout_Capture }
+application_form_Affich_user:
+    path:     /Affich_user
+    defaults: { _controller: applicationBundle:Users:Affiche_User }
+application_form_Affich_Capteur:
+    path:     /Affich_capteur
+    defaults: { _controller: applicationBundle:Capteurs:Affiche_Capteur }
+application_form_Affich_typeCapteur:
+    path:     /Affich_typecapteur
+    defaults: { _controller: applicationBundle:typeCapteurs:Affiche_typeCapteur }
+application_form_Affich_Session:
+    path:     /Affich_session
+    defaults: { _controller: applicationBundle:Sessions:Affiche_Session }
+application_form_Affich_Capture:
+    path:     /Affich_capture
+    defaults: { _controller: applicationBundle:Captures:Affiche_Capture }
+delete_User:
+    path:     /deleteUser/{id}
+    defaults: { _controller: applicationBundle:Users:Supprimer }
+Update_User:
+    path:     /modifierUser/{id}
+    defaults: { _controller: applicationBundle:Users:Modifier }
+delete_Capteur:
+    path:     /deleteCapteur/{id}
+    defaults: { _controller: applicationBundle:Capteurs:SupprimerCapteur }
+Update_Capteur:
+    path:     /modifierCapteur/{id}
+    defaults: { _controller: applicationBundle:Capteurs:ModifierCapteur }
+delete_typeCapteur:
+    path:     /deletetypeCapteur/{id}
+    defaults: { _controller: applicationBundle:typeCapteurs:SupprimertypeCapteur }
+Update_typeCapteur:
+    path:     /modifiertypeCapteur/{id}
+    defaults: { _controller: applicationBundle:typeCapteurs:ModifiertypeCapteur }
+delete_Session:
+    path:     /deleteSession/{id}
+    defaults: { _controller: applicationBundle:Sessions:SupprimerSession }
+Update_Session:
+    path:     /modifierSession/{id}
+    defaults: { _controller: applicationBundle:Sessions:ModifierSession }
+delete_Capture:
+    path:     /deleteCapture/{id}
+    defaults: { _controller: applicationBundle:Captures:SupprimerCapture }
+Update_Capture:
+    path:     /modifierCapture/{id}
+    defaults: { _controller: applicationBundle:Captures:ModifierCapture }
+Deconnexion:
+    path:     /deconnecte
+    defaults: { _controller: applicationBundle:Users:Deconnexion }
+show_User:
+    path:     /showUser/{id}
+    defaults: { _controller: applicationBundle:Users:show}
+recherche_User:
+    path:     /recherche
+    defaults: { _controller: applicationBundle:Users:recherche}
+home-page:
+    path:     /home
+    defaults: { _controller: applicationBundle:Default:index}
+show_Capteur:
+    path:     /showCapteur/{id}
+    defaults: { _controller: applicationBundle:Capteurs:showCap}
+show_typeCapteur:
+    path:     /showtype/{id}
+    defaults: { _controller: applicationBundle:typeCapteurs:show}
+application_form_Ajout_Origine:
+    path:     /Ajout_Origine
+    defaults: { _controller: applicationBundle:Origine:Ajout_Origine }
+ajout_ville:
+    path:     /Ajout_ville
+    defaults: { _controller: applicationBundle:Villes:Ajout_Ville}
+show_Profil:
+    path:     /showProfil
+    defaults: { _controller: applicationBundle:Users:profil}
+unité_mesure:
+    path:     /unité
+    defaults: { _controller: applicationBundle:unite:Ajout_unite}
+Ajout_Param:
+    path:     /Param
+    defaults: { _controller: applicationBundle:ParametreStandard:Ajout_Param}
+Localiser_Capteurs:
+    path:     /localiser/{id}
+    defaults: { _controller: applicationBundle:Capteurs:Localiser_Capteur}
+maps:
+    path:     /map
+    defaults: { _controller: applicationBundle:Default:index}
+Ajout_Paramcap:
+    path:     /Paramcap
+    defaults: { _controller: applicationBundle:Parametre:Ajout_ParamCap}
+chart:
+        path:     /stat
+        defaults: { _controller: applicationBundle:Stat:Stat}

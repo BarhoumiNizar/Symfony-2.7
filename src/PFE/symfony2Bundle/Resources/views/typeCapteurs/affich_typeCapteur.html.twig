@@ -1,0 +1,51 @@
+{%extends 'applicationBundle::starter.html.twig'%}
+{%block body%}
+{%block content%}
+           
+<div class="box box-info">
+            <div class="box-header">
+              
+
+              <h3 class="box-title">Liste des types Capteurs</h3>
+             
+              
+            
+             
+            </div>
+            
+            <div class="box-footer clearfix">
+         <div class="col-lg-12">
+        <h1 class="page-header"></h1>
+        <div>  
+<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+ <thead>
+<tr>    <th scope="col" class="rounded">id</th>
+	<th scope="col" class="rounded">Type</th>
+	<th scope="col" class="rounded">unité</th>
+        
+        <th scope="col" class="rounded">Parametre</th>
+	{% if app.session.get('utilisat').fonction=='admin'%}<th scope="col" class="rounded">modifier</th>
+        {%endif%}
+        {% if app.session.get('utilisat').fonction=='admin'%}<th scope="col" class="rounded">supprimer</th>
+ {%endif%}
+</tr>
+</thead>
+    <tbody>               
+{%for line in res%}
+<tr>    <td>{{line.id}}</td>
+	<td>{{line.nomTypeCapteur}}</td>
+	<td>{{line.unite.nomUniteMesure}}</td>
+        
+        <td ><a href="{{path('Update_typeCapteur',{'id':line.id})}}"><img src="{{asset('bundles/application/images/param.png')}}" alt="" title="" border="0" /></a></td>
+        {% if app.session.get('utilisat').fonction=='admin'%}<td ><a href="{{path('Update_typeCapteur',{'id':line.id})}}"><img src="{{asset('bundles/application/images/modif.png')}}" alt="" title="" border="0" /></a></td>{%endif%}
+	{% if app.session.get('utilisat').fonction=='admin'%}<td><a href="{{path('delete_typeCapteur',{'id':line.id})}}" onclick="if(!confirm('voulez-vous supprimer ce type de capteur')) return false" class="ask"><img src="{{asset('bundles/application/images/del.png')}}" alt="" title="" border="0" /></a></td>{%endif%}
+</tr>
+</tr>
+{%endfor%}
+</tbody>
+</table>
+{% if app.session.get('utilisat').fonction=='admin'%}<a href="{{path('application_form_Ajout_typeCapteur')}}" class="bt_red"><input type="submit" value="Ajouter un nouvel type >>" class="button"></a>{%endif%}
+        </div>
+         </div>
+{%endblock%}
+{%endblock%}

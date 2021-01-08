@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+Geocoding service
+
+<style>
+
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+}
+#map {
+height: 100%;
+}
+#floating-panel {
+position: absolute;
+top: 10px;
+left: 25%;
+z-index: 5;
+background-color: #fff;
+padding: 5px;
+border: 1px solid #999;
+text-align: center;
+font-family: 'Roboto','sans-serif';
+line-height: 30px;
+padding-left: 10px;
+}
+
+
+
+
+
+
+
+</style>
+<body>
+<br> function initMap() {<br> var map = new google.maps.Map(document.getElementById(&#39;map&#39;), {<br> zoom: 8,<br> center: {lat: -34.397, lng: 150.644}<br> });<br> var geocoder = new google.maps.Geocoder();</p> <pre class="language-markup"><code> document.getElementById(&#39;submit&#39;).addEventListener(&#39;click&#39;, function() { geocodeAddress(geocoder, map); }); } function geocodeAddress(geocoder, resultsMap) { var address = document.getElementById(&#39;address&#39;).value; geocoder.geocode({&#39;address&#39;: address}, function(results, status) { if (status === google.maps.GeocoderStatus.OK) { resultsMap.setCenter(results[0].geometry.location); var marker = new google.maps.Marker({ map: resultsMap, position: results[0].geometry.location }); } else { alert(&#39;Geocode was not successful for the following reason: &#39; + status); } }); } &lt;/script&gt; &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap&quot;&gt; &lt;/script&gt; </code></pre> <p></body><br> </html></p> <h3>Ce que j&#39;obtiens</h3> <p>Quand j&#39;ai clique sur le button Geocode ne fonctionne pas le code js </p>
+<body>
+</html>

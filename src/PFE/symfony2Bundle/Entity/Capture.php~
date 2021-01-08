@@ -1,0 +1,87 @@
+<?php
+
+namespace PFE\symfony2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Capture
+ *
+ * @ORM\Table()
+ * @ORM\Entity
+ */
+class Capture
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+     /**
+   * @ORM\ManyToOne(targetEntity="PFE\symfony2Bundle\Entity\ville")
+   * @ORM\JoinColumn(nullable=false)
+   */
+  private $Ville;
+
+     /**
+   * @ORM\ManyToOne(targetEntity="PFE\symfony2Bundle\Entity\Capteur")
+   * @ORM\JoinColumn(nullable=false)
+   */
+  private $capteur;
+    /**
+     * @var \Date
+     *
+     * @ORM\Column(name="dateCapture", type="date")
+     */
+    private $dateCapture;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="localisationCapture", type="string", length=100)
+     */
+    private $localisationCapture;
+    
+    
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomMesure", type="string", length=100)
+     */
+    private $nomMesure;
+    
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="valeurMesure", type="integer")
+     */
+    private $valeurMesure;
+/**
+     * @var integer
+     *
+     * @ORM\Column(name="zoom", type="integer")
+     */
+    private $zoom;
+    /**
+   * @ORM\ManyToOne(targetEntity="PFE\symfony2Bundle\Entity\grandeurMesure")
+   * @ORM\JoinColumn(nullable=false)
+   */
+    private $Mesure;
+    
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    
+   
+}

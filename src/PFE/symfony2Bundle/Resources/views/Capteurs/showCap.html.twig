@@ -1,0 +1,42 @@
+{# empty Twig template #}
+{%extends 'applicationBundle::starter.html.twig'%}
+
+{%block body%}
+{%block content%}
+
+<div class="box box-info">
+            
+            <div class="box-footer clearfix">
+               
+              
+<form method="post"  class="register">
+
+    <h4>Le Capteur de&nbsp{{ res.typeCapteur.nomTypeCapteur}}:&nbsp{{ res.nomCapteur}}</h4>
+            <fieldset class="row2">
+               
+                  </b><img src="{{asset('bundles/application/upload/'~res.typeCapteur.image)}} "width="400" height="250">
+                   
+                       <p><label >Modéle: &nbsp;</label>{{ res.modeleCapteur}}</p>
+                        <p><label>Systeme: &nbsp;</label>{{ res.systemeCapteur}}</p>
+                        <p>   <label>Process: &nbsp;</label>{{ res.processCapteur}}</p>
+                        <p>   <label>Precision: &nbsp;</label>{{ res.precisionCapteur}}</p>
+                        <p> <label>Poid: &nbsp;</label>{{ res.poidsCapteur}}</p>
+                     
+              
+            </fieldset>
+    <fieldset class="row3">
+           <p> <label>Capacite: &nbsp;</label>{{ res.capaciteCapteur}}</p>
+       <p><label >1er Utilistation: &nbsp;</label>{{ res.dtePremUtilisation|date('Y-m-d')}}</p>
+                        <p><label>Fabrication: &nbsp;</label>{{ res.dateFabrication|date('Y-m-d')}}</p> 
+                    <p><label>Expiration: &nbsp;</label>{{ res.dateExpiration|date('Y-m-d')}}</p>
+                       <p><label>Description: &nbsp;</label>{{ res.descriptionCapteur}}</p>
+                 <p><label>type Capteur: &nbsp;</label>{{ res.typeCapteur.nomTypeCapteur}}</p>
+                        <p><label>l'origine: &nbsp;</label>{{ res.idOrigine.nomOrigine}}</p>
+              <button type="button" class="pull-right btn btn-default" id="sendEmail"><a href="{{path('application_form_Affich_Capteur')}}">Retour
+                      <i class="fa fa-arrow-circle-right"></i></a></button>
+                 </fieldset>
+</form>
+            </div>
+          </div>
+    {%endblock%}
+{%endblock%}

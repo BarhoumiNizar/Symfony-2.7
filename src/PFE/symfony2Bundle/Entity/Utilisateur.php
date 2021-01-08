@@ -1,0 +1,383 @@
+<?php
+
+namespace PFE\symfony2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Utilisateur
+ *
+ * @ORM\Table()
+ * @ORM\Entity
+ */
+class Utilisateur 
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomUtilisateur", type="string", length=50)
+     */
+    private $nomUtilisateur;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="photo", type="string", length=255)
+     */
+    private $photo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenomUtilisateur", type="string", length=50)
+     */
+    private $prenomUtilisateur;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cinUtilisateur", type="integer")
+     */
+    private $cinUtilisateur;
+
+    /**
+     * @var \Date
+     *
+     * @ORM\Column(name="dteNaissanceUtilisateur", type="date")
+     */
+    private $dteNaissanceUtilisateur;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="telUtilisateur", type="integer")
+     */
+    private $telUtilisateur;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adressUtilisateur", type="string", length=50)
+     */
+    private $adressUtilisateur;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="login", type="string", length=50)
+     */
+    private $login;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="motpasse", type="string", length=50)
+     */
+    private $motpasse;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fonction", type="string", length=100)
+     */
+    private $fonction;
+
+    /**
+     * @var \Date
+     *
+     * @ORM\Column(name="dateAjoutUtilisateur", type="date")
+     */
+    private $dateAjoutUtilisateur;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nomUtilisateur
+     *
+     * @param string $nomUtilisateur
+     *
+     * @return Utilisateur
+     */
+    public function setNomUtilisateur($nomUtilisateur)
+    {
+        $this->nomUtilisateur = $nomUtilisateur;
+
+        return $this;
+    }
+
+    /**
+     * Get nomUtilisateur
+     *
+     * @return string
+     */
+    public function getNomUtilisateur()
+    {
+        return $this->nomUtilisateur;
+    }
+   public function getUploadDir()
+   {
+       return __DIR__.'/../../../../web/bundles/application/upload';
+      
+   }
+   public function Upload()
+   {
+       $this->photo->move($this->getUploadDir(),$this->photo->getClientOriginalName());
+       $this->photo=$this->photo->getClientOriginalName();
+   }
+    /**
+     * Set prenomUtilisateur
+     *
+     * @param string $prenomUtilisateur
+     *
+     * @return Utilisateur
+     */
+    public function setPrenomUtilisateur($prenomUtilisateur)
+    {
+        $this->prenomUtilisateur = $prenomUtilisateur;
+
+        return $this;
+    }
+
+    /**
+     * Get prenomUtilisateur
+     *
+     * @return string
+     */
+    public function getPrenomUtilisateur()
+    {
+        return $this->prenomUtilisateur;
+    }
+
+    /**
+     * Set cinUtilisateur
+     *
+     * @param integer $cinUtilisateur
+     *
+     * @return Utilisateur
+     */
+    public function setCinUtilisateur($cinUtilisateur)
+    {
+        $this->cinUtilisateur = $cinUtilisateur;
+
+        return $this;
+    }
+
+    /**
+     * Get cinUtilisateur
+     *
+     * @return integer
+     */
+    public function getCinUtilisateur()
+    {
+        return $this->cinUtilisateur;
+    }
+
+    /**
+     * Set dteNaissanceUtilisateur
+     *
+     * @param \DateTime $dteNaissanceUtilisateur
+     *
+     * @return Utilisateur
+     */
+    public function setDteNaissanceUtilisateur($dteNaissanceUtilisateur)
+    {
+        $this->dteNaissanceUtilisateur = $dteNaissanceUtilisateur;
+
+        return $this;
+    }
+
+    /**
+     * Get dteNaissanceUtilisateur
+     *
+     * @return \Date
+     */
+    public function getDteNaissanceUtilisateur()
+    {
+        return $this->dteNaissanceUtilisateur;
+    }
+
+    /**
+     * Set telUtilisateur
+     *
+     * @param integer $telUtilisateur
+     *
+     * @return Utilisateur
+     */
+    public function setTelUtilisateur($telUtilisateur)
+    {
+        $this->telUtilisateur = $telUtilisateur;
+
+        return $this;
+    }
+
+    /**
+     * Get telUtilisateur
+     *
+     * @return integer
+     */
+    public function getTelUtilisateur()
+    {
+        return $this->telUtilisateur;
+    }
+
+    /**
+     * Set adressUtilisateur
+     *
+     * @param string $adressUtilisateur
+     *
+     * @return Utilisateur
+     */
+    public function setAdressUtilisateur($adressUtilisateur)
+    {
+        $this->adressUtilisateur = $adressUtilisateur;
+
+        return $this;
+    }
+
+    /**
+     * Get adressUtilisateur
+     *
+     * @return string
+     */
+    public function getAdressUtilisateur()
+    {
+        return $this->adressUtilisateur;
+    }
+
+    /**
+     * Set login
+     *
+     * @param string $login
+     *
+     * @return Utilisateur
+     */
+    public function setLogin($login)
+    {
+        $this->login = $login;
+
+        return $this;
+    }
+
+    /**
+     * Get login
+     *
+     * @return string
+     */
+    public function getLogin()
+    {
+        return $this->login;
+    }
+
+    /**
+     * Set motpasse
+     *
+     * @param string $motpasse
+     *
+     * @return Utilisateur
+     */
+    public function setMotpasse($motpasse)
+    {
+        $this->motpasse = $motpasse;
+
+        return $this;
+    }
+
+    /**
+     * Get motpasse
+     *
+     * @return string
+     */
+    public function getMotpasse()
+    {
+        return $this->motpasse;
+    }
+
+    /**
+     * Set fonction
+     *
+     * @param string $fonction
+     *
+     * @return Utilisateur
+     */
+    public function setFonction($fonction)
+    {
+        $this->fonction = $fonction;
+
+        return $this;
+    }
+
+    /**
+     * Get fonction
+     *
+     * @return string
+     */
+    public function getFonction()
+    {
+        return $this->fonction;
+    }
+
+    /**
+     * Set dateAjoutUtilisateur
+     *
+     * @param \Date $dateAjoutUtilisateur
+     *
+     * @return Utilisateur
+     */
+    public function setDateAjoutUtilisateur($dateAjoutUtilisateur)
+    {
+        $this->dateAjoutUtilisateur = $dateAjoutUtilisateur;
+
+        return $this;
+    }
+
+    /**
+     * Get dateAjoutUtilisateur
+     *
+     * @return \Date
+   */
+   public function getDateAjoutUtilisateur()
+    {
+        return $this->dateAjoutUtilisateur;
+    }
+
+    /**
+     * Set photo
+     *
+     * @param string $photo
+     *
+     * @return Utilisateur
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+
+        return $this;
+    }
+
+    /**
+     * Get photo
+     *
+     * @return string
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+}

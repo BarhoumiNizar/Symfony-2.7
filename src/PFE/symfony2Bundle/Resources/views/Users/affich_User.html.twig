@@ -1,0 +1,54 @@
+{%extends 'applicationBundle::starter.html.twig'%}
+{%block body%}
+{%block content%}
+         <div class="box box-info">
+            
+            <div class="box-footer clearfix">
+                <h3>La Liste des utilisateurs</h3>
+                <div class="box-footer clearfix">
+        
+<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+ <thead>        <th scope="col" class="rounded">id</th>
+		<th scope="col" class="rounded">Photo</th>
+		<th scope="col" class="rounded" >Nom</th>
+		<th scope="col" class="rounded">Prénom</th>
+		
+		<th scope="col" class="rounded">Rôle </th>
+		<th scope="col" class="rounded">Date d'ajout</th>
+                
+                
+		<th scope="col" class="rounded">Modifier</th>
+		<th scope="col" class="rounded">Supprimer</th>
+                
+                <th scope="col" class="rounded">Afficher</th>
+	</tr>
+ </thead>
+ 
+<tbody>
+                            
+{%for line in res%}
+<tr>    
+        <td><a href="{{ path('show_User', { 'id': line.id }) }}">{{line.id}}</td>
+        <td><img src="{{asset('bundles/application/upload/'~line.photo)}}" width="50" height="50"/></td>
+	<td>{{line.NomUtilisateur}}</td>
+	<td>{{line.prenomUtilisateur}}</td>
+	
+	<td>{{line.fonction}}</td>
+	<td>{{line.dateAjoutUtilisateur|date('Y-m-d')}}</td>
+        
+	<td border-top: 0px solid #fff;><a href="{{path('Update_User',{'id':line.id})}}"><img src="{{asset('bundles/application/images/modif.png')}}" alt="" title="" border="0" /></a></td>
+	<td><a href="{{path('delete_User',{'id':line.id})}}" onclick="if(!confirm('Etes-vous sùr de vouloir supprimer l utilisateur: {{line.NomUtilisateur}}&nbsp;{{line.prenomUtilisateur}}.')) return false" class="ask"><img src="{{asset('bundles/application/images/supp.png')}}" alt="" title="" border="0" /></a></td>
+         
+        <td border-top: 0px solid #fff;><a href="{{path('show_User',{'id':line.id})}}"><img src="{{asset('bundles/application/images/eye.png')}}" alt="" title="" border="0" /></a></td>
+        </tr>
+{%endfor%}
+</tbody>
+</table>
+<a href="{{path('application_form_Ajout_user')}}" class="bt_red"><input type="submit" value="Ajouter un nouvel utilisateur >>" class="button"></a>
+                              
+                </div>
+        </div>
+     </div>
+      </div>
+{%endblock%}
+{%endblock%}
